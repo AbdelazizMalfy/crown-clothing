@@ -37,7 +37,7 @@ class SignUp extends Component {
             })
 
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
     } 
 

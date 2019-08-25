@@ -29,8 +29,6 @@ class App extends React.Component {
               id: snapShot.id,
               ...snapShot.data()
           })
-
-          console.log(this.state)
         })
       } else {
         this.props.setCurrentUser(userAuth)
@@ -48,7 +46,7 @@ class App extends React.Component {
         <Header />
         <Switch >
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/shop" component={ShopPage} />
+          <Route path="/shop" component={ShopPage} />
           <Route exact path="/checkout" component={CheckoutPages} />
           <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />) }  />
         </Switch>

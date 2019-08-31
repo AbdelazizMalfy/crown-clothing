@@ -10,6 +10,8 @@ import CheckoutPages from './pages/checkout/Checkout.component';
 
 import Header from './components/header/Header.component';
 
+import { GlobalStyle } from './global.styles';
+
 import { auth , createUserProfileDocument } from './firebase/firebase.utils';
 
 import { setCurrentUser } from './redux/user/user.actions'; 
@@ -43,6 +45,7 @@ class App extends React.Component {
   render (){
     return (
       <div>
+        <GlobalStyle />
         <Header />
         <Switch >
           <Route exact path="/" component={HomePage} />
